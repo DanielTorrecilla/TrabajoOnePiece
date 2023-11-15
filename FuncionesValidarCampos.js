@@ -1,6 +1,6 @@
 
 function validarNombreBanda(nombreBanda) {
-    const isValid = nombre.length > 4 && !/\d/.test(nombre);
+    const isValid = nombreBanda.length > 4 && !/\d/.test(nombreBanda);
     mostrarMensajeError('nombreBanda', isValid, 'El nombre de la banda debe tener más de 4 caracteres y no puede contener números.');
     return isValid;
 }
@@ -12,14 +12,14 @@ function validarURLBandera(imagenBandera) {
 }
 
 function validarLiderBanda(liderBanda) {
-    const isValid = nombreLider.length > 4 && !/\d/.test(lider);
+    const isValid = liderBanda.length > 4 && !/\d/.test(liderBanda);
     mostrarMensajeError('liderBanda', isValid, 'El líder de la banda debe tener más de 4 caracteres y no puede contener números.');
     return isValid;
 }
 
 function validarRecompensa(recompensaLider) {
     const isValid = !isNaN(recompensaLider) && parseFloat(recompensaLider) > 1000;
-    mostrarMensajeError('recompensaLider', isValid, 'La recompensa del líder de la banda debe ser un número mayor que 1000.');
+    mostrarMensajeError('recompensaLider', isValid, 'La recompensa del líder de la banda debe ser un número positivo o igual a cero.');
     return isValid;
 }
 
@@ -37,8 +37,8 @@ function validarContramaestre(ContramaestreBanda) {
 }
 
 function validarNumeroMiembros(MiembrosImportantes) {
-    const isValid = !isNaN(MiembrosImportantes) && parseInt(MiembrosImportantes) <= 5;
-    mostrarMensajeError('numeroMiembros', isValid, 'El número de miembros importantes de la banda debe ser un número menor o igual a 5.');
+    const isValid = !isNaN(MiembrosImportantes) && parseInt(MiembrosImportantes) <= 5 && parseInt(MiembrosImportantes) > 0;
+    mostrarMensajeError('MiembrosImportantes', isValid, 'El número de miembros importantes de la banda deben ser mínimo 1 y máximo 5.');
     return isValid;
 }
 
@@ -50,10 +50,8 @@ function validarBandaActiva(bandaActiva) {
 }
 
 function mostrarMensajeError(campo, isValid, mensaje) {
-    const elementoError = document.getElementById(`${campo}Error`);
+    const elementoError = document.getElementById(`${campo} Error`);
     elementoError.innerText = mensaje;
-
-
 
     if (isValid) {
         elementoError.style.display = 'none';
