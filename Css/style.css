@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(248, 244, 244);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://static.wikia.nocookie.net/onepiece/images/b/b5/Site-background-light/revision/latest?cb=20211209210547);
+    background-repeat: repeat;}
+
+head {
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: rgb(248, 244, 244);
+    text-align: center;
+  }
+
+
+  /* Divs */
+
+  .divPrincipal {
+    background-color: rgb(248, 244, 244);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    border: 0;
+  }
+  
+  .divContenido {
+    background-color: #f2f2f2;;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    Position: fixed;
+    left: 18%;
+    width: 68%;
+    margin-top: 2%;
+    height: 86%;
+    border-radius: 5px;
+  }
+
+  .divIzquierda {
+    background-color: #f2f2f2;;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    position:fixed;
+    margin-top: 2%;
+    width: 12%;
+    border-radius: 5px;
+  }
+
