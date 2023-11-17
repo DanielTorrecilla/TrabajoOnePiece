@@ -55,3 +55,13 @@ footer {
     border-radius: 5px;
   }
 
+  #formularioBanda label,
+  #formularioBanda input[type="text"],
+  #formularioBanda input[type="url"],
+  #formularioBanda input[type="number"],
+  #formularioBanda input[type="checkbox"] {
+    margin-bottom: 5px;
+    display: block;
+    margin-left: 5%;
+    margin-top: 7px;
+  }

@@ -4,15 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trabajo One Piece</title>
     <link rel="stylesheet" href="Css/style.css">
-    <script src="Scripts/script.js"></script>
+    <script src="ScriptsLuis.js"></script>
 </head>
 <body>
     <div class="divPrincipal" id="divPrincipal">
         <div class = "divIzquierda">Skeitmen
         </div>
         <div class="divContenido">
-            <h1>Trabajo One Piece</h1>
-            <h2>Trabajo de prueba</h2>
+            <form id="formularioBanda">
+                <label for="nombreBanda">Nombre de la banda:</label>
+                <input type="text" id="nombreBanda" required><br>
+              
+                <label for="imagenBandera">URL de la bandera pirata:</label>
+                <input type="url" id="imagenBandera" required><br>
+              
+                <label for="liderBanda">Lider de la banda:</label>
+                <input type="text" id="liderBanda" required><br>
+              
+                <label for="recompensaLider">Recompensa del lider:</label>
+                <input type="number" id="recompensaLider" required><br>
+              
+                <label for="nombreBarco">Nombre del barco:</label>
+                <input type="text" id="nombreBarco" required><br>
+              
+                <label for="numeroMiembros">Numero de miembros:</label>
+                <input type="number" id="numeroMiembros" required><br>
+              
+                <label for="contramaestreBanda">Contramaestre de la banda:</label>
+                <input type="text" id="contramaestreBanda" required><br>
+              
+                <label for="bandaActiva">Banda activa:</label>
+                <input type="checkbox" id="bandaActiva" checked><br>
+
+                <label for="miembrosBanda">Miembros de la banda:</label>
+                <div id="miembrosBandaContainer"></div>
+                <button type="button" onclick="agregarMiembro()">+</button>
+                 <button type="submit" style="display: none;">Guardar banda</button>
+              </form>
         </div>
     </div>
 
