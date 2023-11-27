@@ -10,7 +10,7 @@ function agregarBanda() {
     var BandaActiva = document.getElementById('bandaActiva').value;
 
     var banda = {
-        id: generarId(),
+        id: nombreBanda,
         nombreBanda: nombreBanda,
         imagenBandera: imagenBandera,
         liderBanda: liderBanda,
@@ -31,7 +31,3 @@ function agregarBanda() {
 }
 
 
-function generarId() {
-    return '_' + Math.random().toString(36).substr(2, 9);
-
-}
